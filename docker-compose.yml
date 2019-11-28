@@ -21,6 +21,8 @@ services:
     image: chemaxon/jchem_webservices:latest
     volumes:
       - cxn_home:/usr/local/tomcat/.chemaxon/
-    
+      - ./license.cxl:/usr/local/tomcat/.chemaxon/license.cxl
+      - ./ws-config.xml:/usr/local/tomcat/.chemaxon/ws-config.xml
+          
 volumes:
   cxn_home:
